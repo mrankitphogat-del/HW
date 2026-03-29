@@ -6,5 +6,6 @@
 - [ ] Remove bug in H1 heading for Founder and CEO section  
 - [ ] Fix internal links position  
 - [ ] Make site colorful  
+- [ ] photo problem chrome
 
 ### Ankit
