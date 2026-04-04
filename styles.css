@@ -1,18 +1,18 @@
 :root {
-  --bg: #08101b;
-  --bg-soft: #101a2b;
-  --bg-soft-2: #142238;
-  --panel: rgba(255, 255, 255, 0.06);
-  --panel-strong: rgba(255, 255, 255, 0.1);
-  --text: #eef4ff;
-  --muted: #a9b7cc;
-  --line: rgba(255, 255, 255, 0.1);
-  --accent: #b8d4ff;
-  --accent-2: #84b7ff;
-  --accent-3: #dbe8ff;
-  --success: #9bd3b0;
-  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
-  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.18);
+  --bg: #0f0c20; /* Deep indigo background */
+  --bg-soft: #1a1635;
+  --bg-soft-2: #251f4a;
+  --panel: rgba(255, 255, 255, 0.08);
+  --panel-strong: rgba(255, 255, 255, 0.15);
+  --text: #ffffff;
+  --muted: #bbaed4; /* Soft lavender for muted text */
+  --line: rgba(255, 255, 255, 0.12);
+  --accent: #ff8fa3; /* Warm pink for highlights */
+  --accent-2: #a084ff; /* Vibrant purple for secondary accents */
+  --accent-3: #4facfe; /* Calming cyan for pills/tags */
+  --success: #43e97b;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.2);
   --radius: 24px;
   --radius-sm: 16px;
   --container: 1180px;
@@ -29,9 +29,10 @@ body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 10% 0%, rgba(132, 183, 255, 0.14), transparent 30%),
-    radial-gradient(circle at 100% 20%, rgba(184, 212, 255, 0.1), transparent 28%),
-    linear-gradient(180deg, #07101a 0%, #0a1322 42%, #08101b 100%);
+    radial-gradient(circle at 10% 0%, rgba(160, 132, 255, 0.2), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(255, 143, 163, 0.15), transparent 30%),
+    radial-gradient(circle at 50% 80%, rgba(79, 172, 254, 0.1), transparent 40%),
+    linear-gradient(180deg, #0f0c20 0%, #16122d 42%, #0f0c20 100%);
 }
 
 body::before {
@@ -123,7 +124,8 @@ img { max-width: 100%; display: block; }
   bottom: -8px;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent-2), transparent);
+  /* Updated to use a pink-to-purple gradient */
+  background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform .25s ease;
@@ -284,7 +286,9 @@ img { max-width: 100%; display: block; }
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, rgba(132,183,255,0.28), rgba(184,212,255,0.16));
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border: none; /* Removed the border for a cleaner look */
 }
 
 .btn-secondary {
